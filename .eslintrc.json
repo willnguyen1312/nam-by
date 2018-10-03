@@ -1,10 +1,25 @@
 {
   "root": true,
   "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "plugins": ["prettier"],
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true,
+    "node": true
   },
   "rules": {
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "semi": false,
+        "trailingComma": "es5"
+      }
+    ],
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "react/prop-types": "off",
+    "semi": ["error", "never"]
   }
 }

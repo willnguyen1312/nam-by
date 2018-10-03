@@ -1,20 +1,17 @@
-import { Link as GatsbyLink } from 'gatsby';
-import React from 'react';
-import { Container, Heading, Link, Text } from 'rebass';
-import Layout from '../components/Layout';
+import { Link } from 'gatsby'
+import React from 'react'
+import Layout from '../components/Layout'
 
 const SecondPage = () => (
   <Layout>
-    <Container>
-      <Heading my={3}>Hi from the second page</Heading>
-      <Text is="p">Welcome to page 2</Text>
-      <Text is="p" my={3}>
-        <Link is={GatsbyLink} to="/">
-          Go back to the homepage
-        </Link>
-      </Text>
-    </Container>
+    <div>
+      <h1>Hi from the second page</h1>
+      <p>Welcome to page 2</p>
+      <div>
+        <Link to="/">Go back to the homepage</Link>
+      </div>
+    </div>
   </Layout>
-);
+)
 
-export default SecondPage;
+export default SecondPage
